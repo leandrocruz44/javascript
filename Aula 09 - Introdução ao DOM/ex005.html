@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background: rgba(223, 4, 4, 0.555);
+            color: rgb(41, 33, 33);
+            font: normal 20pt Times;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript<br/></p>
+    <div class="msg"> Clique em mim </div>
+    <script>
+        var body = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*
+        p1.style.color = 'purple'
+        body.style.background = 'gold'
+        window.document.write('Está escrito assim: '+ p1.innerHTML) // ###quando por HTML pega tudo, quando por innerText pega só o texto
+        var d = window.document.getElementsByName('msg')[0] // ###pegou por id (que foi determinada junto ao <div> para que pudesse ser manipulada
+        d.style.background = 'green' // ###mudando o fundo da linha referente a variável 'd'
+        d.style.color = 'white' // ###mudando a cor da letra da linha var 'd'
+        d.innerText = 'Maria vai com as outras' // ###mudando o div com a variável 'd'
+        window.document.getElementById('msg').innerText = 'Olá babaca'// ###mudando o div comando inteiro na mesma linha
+        var nome = window.prompt('Digite uma palavra') // ###pra dar a mensagem pra colocar o nome
+        window.document.write(nome) // ###mostrar a mensagem digitada no prompt */
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+        d.style.color = 'white'
+
+    </script>
+</body>
+</html>

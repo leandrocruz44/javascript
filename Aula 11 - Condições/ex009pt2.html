@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural ou Estrangeiro</title>
+</head>
+<body>
+    <h1>Você é Nativo ou Estrangeiro?</h1>
+    <P>Você está no Brasil</P>
+    Digite seu país de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Checar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var pais = window.document.getElementById('txtpais')
+            var res = window.document.getElementById('res')
+            if (pais.value == 'BRASIL') {
+                res.innerHTML = (`<p>Você nasceu no ${pais.value}. Você é <strong>NATIVO</strong>!<p>`)
+            } else {
+                res.innerHTML = (`<p>Você nasceu no ${pais.value}. Você é <strong>ESTRANGEIRO!</strong>!</p>`)
+            }
+        }
+    </script>
+</body>
+</html>
